@@ -3,11 +3,6 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-from django.db import models
-from django.contrib.auth.models import User
-
-# Create your models here.
-
 
 #Customer model
 class Customer(models.Model):
@@ -67,7 +62,7 @@ class Room(models.Model):
     apartmentName = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
     apartmentPrice = models.DecimalField(max_digits=10, decimal_places=2)
-    persons = models.CharField(choices=(('1 in 1', 'one in one'),( '2 in 1','Two in one'),( '3 in 1','Three in one'),( '4 in 1','Four in one')),max_length=100)
+    persons = models.CharField(choices=(( '1 in 1','1 in 1'),( '2 in 1','2 in 1'),( '3 in 1','3 in 1'),('4 in 1','4 in 1')),max_length=100)
     description = models.TextField()
     apartmentImage = models.ImageField(upload_to='properties/images/')
     room1 = models.ImageField(upload_to='properties/images/')
@@ -86,13 +81,14 @@ class Payment(models.Model):
     ref = models.CharField(max_length=200)
     email = models.EmailField(max_length=200, unique=True)
     booked_room = models.ForeignKey(Room, on_delete=models.CASCADE)
-    booked_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    booked_by = models.ForeignKey(Customer, on_delete=models.CASCADE)
     date_created = models.DateTimeField(auto_now_add=True)
     phone = models.CharField(max_length=20)
     
     def __str__(self):
         return self.email
-        
+
+
 
 
 

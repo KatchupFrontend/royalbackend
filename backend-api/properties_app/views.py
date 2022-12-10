@@ -22,7 +22,7 @@ class RoomDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Room.objects.all()
     serializer_class = serializers.RoomDetailSerializer
 
-    
+
 class CustomerList(generics.ListCreateAPIView):
     queryset = models.Customer.objects.all()
     serializer_class = serializers.CustomerSerializer
@@ -57,3 +57,13 @@ class CategoryList(generics.ListCreateAPIView):
 class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.CampusCategory.objects.all()
     serializer_class = serializers.CategoryDetailSerializer
+
+
+class PaymentList(generics.ListCreateAPIView):
+    queryset = models.Payment.objects.all()
+    serializer_class = serializers.PaymentSerializer
+
+
+class PaymentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.Payment.objects.all()
+    serializer_class = serializers.PaymentDetailSerializer
