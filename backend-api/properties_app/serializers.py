@@ -78,7 +78,7 @@ class CategoryDetailSerializer(serializers.ModelSerializer):
 class PaymentSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Payment
-        fields = ['booked_room','amount', 'booked_by', 'date_created','ref','phone','email']
+        fields = ['booked_room','amount', 'date_created','ref','phone','email']
 
     def __init__(self, *args, **kwargs):
          super(PaymentSerializer, self).__init__(*args, **kwargs)
@@ -87,7 +87,7 @@ class PaymentSerializer(serializers.ModelSerializer):
 class PaymentDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Payment
-        fields = ['id','booked_room','amount', 'booked_by', 'date_created','ref','phone','email']
+        fields = ['id','booked_room','amount', 'date_created','ref','phone','email']
 
     def __init__(self, *args, **kwargs):
          super(PaymentDetailSerializer, self).__init__(*args, **kwargs)

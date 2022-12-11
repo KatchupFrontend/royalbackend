@@ -81,10 +81,10 @@ class Payment(models.Model):
     ref = models.CharField(max_length=200)
     email = models.EmailField(max_length=200, unique=True)
     booked_room = models.ForeignKey(Room, on_delete=models.CASCADE)
-    booked_by = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    # booked_by = models.ForeignKey(Customer, on_delete=models.CASCADE)
     date_created = models.DateTimeField(auto_now_add=True)
     phone = models.CharField(max_length=20)
-    
+
     def __str__(self):
         return self.email
 

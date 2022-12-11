@@ -15,7 +15,7 @@ urlpatterns = [
     path('customer/<int:pk>/', views.CustomerDetail.as_view()),
     path('bookings/', views.BookList.as_view()),
     path('booking/<int:pk>/', views.BookingDetail.as_view()),
-    path('payments/', views.PaymentList.as_view()),
+    path('payments/', views.PaymentView.as_view()),
     path('payment/<int:pk>/', views.PaymentDetail.as_view()),
 
     # path('booking/<int:pk>/', views.BookingDetail.as_view()),
