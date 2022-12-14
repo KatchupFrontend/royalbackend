@@ -26,7 +26,7 @@ class Login(APIView):
                     'access': str(token.access_token)
                 }
                 return Response(data,status=status.HTTP_200_OK) 
-        except User.DoesNotExist:
+        except Customer.DoesNotExist:
             pass
         return Response({'message': 'Invalid username and/or password.','status': 404},status=status.HTTP_401_UNAUTHORIZED)
 
