@@ -26,13 +26,12 @@ SECRET_KEY = 'django-insecure-jgscr7q%jt)2(ear#95+)!b9=#gh274qy($6h90=0u1kq^m#&1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['royalbackend-production.up.railway.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,7 +41,9 @@ INSTALLED_APPS = [
     
     'properties_app',
     'account',
+
     # Third party
+    'corsheaders',
     'rest_framework',
 ]
 
@@ -131,6 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
