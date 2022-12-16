@@ -9,7 +9,7 @@
   "routes": [
     {
       "src": "/.*",
-      "dest": "backend_api.wsgi:application"
+      "dest": "booking_api.wsgi:application"
     }
   ]
 }
