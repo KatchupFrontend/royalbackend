@@ -61,10 +61,8 @@ MIDDLEWARE = [
 
 
 
-CORS_ALLOWED_ORIGINS = [
-    "https://saferoyal-frontend.vercel.app/"
-  
-]
+CORS_ALLOW_ALL_ORIGIN = True
+
 
 ROOT_URLCONF = 'booking_api.urls'
 
