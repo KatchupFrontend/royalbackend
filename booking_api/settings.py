@@ -62,7 +62,7 @@ MIDDLEWARE = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    "www.saferoyal.com,
+    "www.saferoyal.com"
   
 ]
 
