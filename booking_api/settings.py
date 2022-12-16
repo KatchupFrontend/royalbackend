@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jgscr7q%jt)2(ear#95+)!b9=#gh274qy($6h90=0u1kq^m#&1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -58,12 +58,8 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:5173",
-#     "http://127.0.0.1:5173",
-# ]
 
-CORS_ALLOW_ALL_ORIGINS = True;
+CORS_ALLOW_ALL_ORIGIN = True
 
 
 ROOT_URLCONF = 'booking_api.urls'
