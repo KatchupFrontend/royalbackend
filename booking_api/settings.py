@@ -61,7 +61,8 @@ MIDDLEWARE = [
 
 
 
-CORS_ALLOW_ALL_ORIGIN = True
+CORS_ORIGIN_WHITELIST = [  'https://saferoyal.com']
+
 
 
 ROOT_URLCONF = 'booking_api.urls'
