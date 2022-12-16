@@ -62,7 +62,7 @@ MIDDLEWARE = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    "www.saferoyal.com"
+    "https://saferoyal-frontend.vercel.app/"
   
 ]
 
