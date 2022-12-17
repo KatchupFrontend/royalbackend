@@ -61,7 +61,8 @@ MIDDLEWARE = [
 
 
 
-CORS_ORIGIN_WHITELIST = [  'https://saferoyal.com']
+#Allow all origins
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 
