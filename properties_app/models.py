@@ -39,7 +39,7 @@ class Customer(models.Model):
 class CampusCategory(models.Model):
     campusname = models.CharField(max_length=100)
     campuslocation = models.CharField(max_length=50)
-    campusimage = models.URLField(max_length=200, default=None, null= True)
+    campusilogo = models.URLField(max_length=200, default=None, null= True)
 
 
     def __str__(self):
