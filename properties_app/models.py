@@ -65,9 +65,9 @@ class Room(models.Model):
     persons = models.CharField(choices=(( '1 in 1','1 in 1'),( '2 in 1','2 in 1'),( '3 in 1','3 in 1'),('4 in 1','4 in 1')),max_length=100)
     description = models.TextField()
     apartmentImage = models.ImageField(upload_to='properties/images/')
-    room1 = models.ImageField(upload_to='properties/images/')
-    room2 = models.ImageField(upload_to='properties/images/')
-    room3 = models.ImageField(upload_to='properties/images/')
+    room1 = models.URLField(max_length=200, default=None, null= True)
+    room2 = models.URLField(max_length=200, default=None, null= True)
+    room3 = models.URLField(max_length=200, default=None, null= True)
 
     def __str__(self):
         return self.apartmentName
